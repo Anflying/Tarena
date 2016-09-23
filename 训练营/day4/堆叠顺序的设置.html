@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>堆叠顺序的设置</title>
+<style>
+	div{
+		width:800px;
+		height:500px;
+		background-color:#066;
+		margin:30px auto;
+		position:relative;
+	}
+	#img1{
+		position:absolute;
+		top:80px;
+		left:200px;
+	}
+	#img2{
+		position:absolute;
+		left:150px;
+		top:130px;
+	}
+	#img3{
+		position:absolute;
+		top:100px;
+		left:350px;
+		}
+	img:hover{
+		/*堆叠顺序:值越大越靠上*/
+		z-index:9999;
+	}
+</style>
+</head>
+<body>
+	<div>
+		<img id="img1" src="../images/1.jpg"/>
+		<img id="img2" src="../images/2.jpg"/>
+		<img id="img3" src="../images/3.jpg"/>
+	</div>
+</body>
+</html>

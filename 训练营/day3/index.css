@@ -1,0 +1,100 @@
+*{
+	margin:0;
+	padding:0;
+	
+}
+body{
+	background-color:#0072e3;
+}
+
+.logo{
+	height:61px;
+	width:960px;
+	margin:0 auto;
+	background-image:url(img/top_bg.png)
+	
+}
+.nav{
+	height:100px;
+	margin:0 auto;
+	background-color:#0488BB;
+}
+.nav ul{
+	display: table;
+	margin:0 auto;
+	text-align: center;	
+	height:100px;
+}
+
+.nav ul li{
+	list-style:none;
+	padding:10px;
+	margin:0 20px;
+	float:left;
+}
+.nav ul li a{
+	display:block;
+	height:77px;
+	width:68px;
+}
+.img1{
+	background-image:url(img/index_out.png)
+}
+.img2{
+	background-image:url(img/role_out.png)
+}
+.img3{
+	background-image:url(img/admin_out.png)
+}
+.img4{
+	background-image:url(img/fee_out.png)
+}
+.img5{
+	background-image:url(img/account_out.png)
+}
+.img6{
+	background-image:url(img/service_out.png)
+}
+.img7{
+	background-image:url(img/bill_out.png)
+}
+.img8{
+	background-image:url(img/report_out.png)
+}
+.img9{
+	background-image:url(img/information_out.png)
+}
+.img10{
+	background-image:url(img/password_out.png)
+}
+
+.img1:hover{
+	background-image:url(img/index_on.png);
+}
+.img2:hover{
+	background-image:url(img/role_on.png);
+}
+.img3:hover{
+	background-image:url(img/admin_on.png);
+}
+.img4:hover{
+	background-image:url(img/fee_on.png);
+}
+.img5:hover{
+	background-image:url(img/account_on.png);
+}
+.img6:hover{
+	background-image:url(img/service_on.png);
+}
+.img7:hover{
+	background-image:url(img/bill_on.png);
+}
+.img8:hover{
+	background-image:url(img/report_on.png);
+}
+.img9:hover{
+	background-image:url(img/information_on.png);
+}
+.img10:hover{
+	background-image:url(img/password_on.png);
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>表单</title>
+<style>
+	.iputId{
+		padding:5px;
+	}
+</style>
+</head>
+<body>
+	<!-- 1.表单元素 
+	action:声明表单提交的目标
+	method:
+	enctype:表单提交的编码方式
+	 -->
+	<form action="ip地址和端口号">
+		<!-- 2.表单控件
+		input元素:
+			文本框,密码框
+			单选框,多选框
+			文件框,隐藏框
+			提交按钮,重置按钮,普通按钮
+		其他元素:
+			label,下拉选,文本域-->
+		<p>
+			<!-- value:设置默认值,maxlength:设置最大输入长度,readonly:设置只读 -->
+			帐号&nbsp;:&nbsp;&nbsp;<input value="#" maxlength="10" type="text" readonly  /><br><br>
+			密码&nbsp;:&nbsp;&nbsp;<input value="#" type="password" readonly/>
+		</p>
+		<p>
+			<!-- 单选框 
+			name:设置组名,同组radio彼此互斥 checked:设置默认选中-->
+			性别&nbsp;:
+			<input name="sex" type="radio" checked/>男
+			<input name="sex" type="radio"/>女
+		</p>
+		<p>
+			<!-- 多选框 -->
+			兴趣&nbsp;:
+			<input type="checkbox" id="basketball"/><label for="basketball">篮球</label>
+			<input type="checkbox" id="football"/><label for="football">足球</label>
+			<input type="checkbox" id="pinpanball"/><label for="pinpanball">乒乓球</label>
+			<input type="checkbox"/>羽毛球
+		</p>
+		<p>
+			<!-- 文件框 -->
+			头像 : <input type="file"/>
+		</p>
+		<p>
+			<!-- 隐藏框 
+			看不见的文本框,用来传输一些秘密的数据,其值通过value预置.-->
+			<input type="hidden" value="scr"/>
+		</p>
+		<p>
+			<!--提交按钮:触发表单数据的提交;
+				重置按钮:将表单中的数据重置为初始值;
+				普通按钮:	默认没有功能,需通过js自定义功能;-->
+			<input type="submit" value="注册"/>
+			<input type="reset" value="重置"/>
+			<input type="button" value="普通按钮"/>
+		</p>
+		<p>
+			<!--label的作用是将文字与控件绑定在一起,从而增大控件的可点击面积,能提高用户体验
+				设置过程:1.给控件绑定id;
+						2.在label上增加for="id"
+						任何元素都有id属性,是元素的唯一标识-->
+			<input type="checkbox" id="dish" />
+			<label for="dish">我已阅读并自愿遵守此协议</label>
+		</p>
+		<p>
+			<!-- 下拉选项
+				selected:用来设置默认选中;
+				value -->
+			城市 : 
+			<select>
+				<option value="1">请选择</option>
+				<option value="2">江苏</option>
+				<option value="3">福建</option>
+				<option value="4">江西</option>
+				<option value="5" selected>浙江</option>
+			</select>
+		</p>
+		<p>
+			<!-- 文本域
+			rows:设置高度
+			cols:设置宽度 -->
+			简介 :<br>
+			<textarea rows="5" cols="30">who am i</textarea>
+		</p>
+	</form>
+</body>
+</html>

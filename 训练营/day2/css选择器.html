@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css选择器</title>
+<style>
+/*1.类选择器:
+根据class选择元素,选中class相同的一组元素;*/
+.female{
+	color:pink;
+}
+/*2.id选择器:
+根据id选择唯一的元素;*/
+#something{
+	color:red;
+}
+/*3.选择器组:
+写出一组选择器,选中他们所对应的目标的并集;*/
+.female,#something{
+	font-family:"微软雅黑","文泉驿正黑","黑体";
+}
+/*4.派生选择器*/
+/*4.1子元素选择器:选择父元素的儿子;*/
+#p5>b{
+	font-size:30px;
+}
+/*4.2后代选择器:选择父元素的子孙;*/
+#p5 b{
+	color:red;	
+}
+/*5.伪类选择器*/
+/*5.1选择未访问过的超链接*/
+a:link{
+	color:red;
+}
+/*5.2选择已访问过的超链接*/
+a:visited{
+	color:green;
+}
+/*5.3选择激活态(正在点击)的元素*/
+#btn:active{
+	background-color:blue;
+}
+/*5.4选择有焦点(光标正在闪烁)的元素*/
+#text:focus{
+	background-color:#ccc;
+}
+/*5.5选择鼠标悬停的元素*/
+img:hover{
+	width:250px;
+	height:250px;
+}
+</style>
+</head>
+<body>
+	<h1 class="female">苍老师</h1>
+	<h2>范传奇</h2>
+	<h3 class="female">王克晶</h3>
+	<p>苍老师啊苍老师</p>
+	<p>范传奇啊范传奇</p>
+	<p>王克晶啊王克晶</p>
+	<p id="something">瞧你们那点破事</p>
+	<p id=p5>
+		北京市<u>海淀区<b>北三环</b>西路</u>甲18号<b>中鼎</b>大厦B8
+	</p>
+	<p>
+		<a href="http://www.tmooc.cn">达内</a>
+		<a href="http://www.baidu.com">地址</a>
+	</p>
+	<p>
+		<input id="btn" type="button" value="按钮"/>
+	</p>
+	<p>
+		<textarea id="text" rows="10" cols="40"></textarea>
+	</p>
+	<p>
+		<img src="../images/01.jpg"/>
+	</p>
+</body>
+</html>
