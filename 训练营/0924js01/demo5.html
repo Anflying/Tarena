@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>阶乘</title>
+<script>
+	function jc(){
+		var m = document.getElementById("num").value;
+		var res = document.getElementById("result");
+		if(isNaN(m)){
+			res.innerHTML = "请输入0-100数字";
+		}else if(m<0){
+			res.innerHTML = "不能小于0";
+		}else if(m==0){//0的阶乘是1
+			res.innerHTML = 1; 
+		}else{//从1累乘到n
+			var s = 1;
+			for(var i=m;i>0;i--){
+				s*=i; 
+			}
+			res.innerHTML = s;
+		}
+	}
+</script>
+</head>
+<body>
+	<input type="text" id="num"/>
+	<input type="button" value="阶乘" onclick="jc()"/>=<span id="result"></span>
+</body>
+</html>

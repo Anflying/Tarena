@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	//页面加载是生成随机数,由于该代码未写在函数内,所以打开页面时立即执行
+	var m = parseInt(Math.random()*100);
+	//在用户看到页面内容点击按钮前,随机数早已生成,所以此方法内可以使用它
+	function guess(){
+		//获取文本值
+		var n = document.getElementById("num").value;
+		var res = document.getElementById("span");
+		if(isNaN(n)){//不是数字,向输出框写入提示信息
+			res.innerHTML = "请输入数字";
+		}else{//是数字进行大小比较
+			if(n>m&&n<100){//大于随机数
+				res.innerHTML = "太大了";
+			}else if(n<m){//小于随机数
+				res.innerHTML = "太小了";
+			}else if(n==100){
+				res.innerHTML = "太大了+"	
+			}else if(n>100){
+				res.innerHTML = "超过范围了"	
+			}else{//等于随机数
+				res.innerHTML = "猜对了";
+			}
+		}
+	}
+</script>
+</head>
+<body>
+	<input id="num" type="text"/>&nbsp;
+	<input type="button" value="猜" onclick="guess();"/>&nbsp;
+	=&nbsp;<span id="span"></span> <br><br>
+	<input type="button" value="猜你嘛批" onclick="alert(m)"/>
+</body>
+</html>

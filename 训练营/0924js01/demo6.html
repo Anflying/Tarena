@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>内置对象</title>
+<script>
+	//1.String
+	var s = "javascript是很像java的";
+	console.log(s.charAt(4));//第4个字符
+	console.log(s.charCodeAt(4));
+	console.log(s.indexOf("java"));//从前面往后面找
+	console.log(s.lastIndexOf("java"));//从后面往前面找
+	//截取字符串
+	console.log(s.substring(4,10));
+	//String的API无法改变原始的String.而是生成一个新的String并返回,对原始的String没有影响
+	console.log(s);
+	console.log(s.replace("java","ECMA"));//替换第一个java的字符串
+	console.log(s.split(""));
+	
+</script>
+</head>
+<body>
+	
+</body>
+</html>

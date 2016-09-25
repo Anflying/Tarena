@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js的基本语法</title>
+<script>
+	//函数之外的js在页面加载时直接调用
+	//而函数之内的js在事件触发时调用
+	
+	//1.声明变量
+	var x;
+	console.log(x);//网页控制台
+	x = 2;
+	console.log(x);
+	var y = 3;
+	console.log(y);
+	
+	//2.隐式转换
+	var s = "hello";
+	var n = 3.14;
+	var b = true;
+	//任何的数据类型和字符串相加都会转会为字符串,字符串的优先级最高
+	console.log(s+n);
+	console.log(s+b);
+	//数字和布尔值相加,布尔值会转换为数字	
+	console.log(n+b);
+	//布尔值和布尔值相加 true会转换为1,false会转换为0
+	console.log(b+b);//输出2
+
+	//3.强制转换
+	var m = 5;
+	var n = 6;
+	console.log(m.toString()+n.toString());//强制转换成字符串
+	console.log(parseInt(3.14));//取整
+	console.log(parseFloat("3.14")+1);
+	console.log(parseInt("abc"));
+	console.log(typeof(n));
+	console.log(isNaN(n));//判断传入参数是否为NaN
+	
+	//4.运算符
+	console.log(5/2);
+	var aa = 9;
+	var bb = "9";
+	console.log(aa==bb);//变量的值相等
+	console.log(aa===bb);//变量的类型不同
+	
+	//5.条件表达式
+	var d = 8;
+	if(d){
+		console.log("非空")
+	}else{
+		console.log("空值")
+	}
+	var e = NaN;
+	e && console.log("ok")
+	</script>
+</head>
+<body>
+	<h1>js语法</h1>
+</body>
+</html>

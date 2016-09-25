@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>求平方</title>
+<script>
+	function pf(){
+		console.log(1);
+		//获取文本写入框
+		var input = document.getElementById("num");
+		console.log(input);
+		//获取文本框
+		var n = input.value;
+		console.log(n);
+		//获取输出框
+		var res = document.getElementById("result");//获取输出文本框框
+		var res2 = document.getElementById("span");//获取输出元素
+		console.log(res);
+		//判断输入的值是不是数字
+		if(isNaN(n)){//不是数字,向输出框写入提示信息
+			res.value = "请输入数字";//框输出
+			res2.innerHTML = "请输入数字";//元素内容输出
+		}else{//是数字,向输出框写入计算结果
+			res.value = n*n;
+			res2.innerHTML = n*n;
+		}
+	}
+</script>
+</head>
+<body>
+	<input id="num" type="text"/>&nbsp;
+	<input type="button" value="平方" onclick="pf();"/>&nbsp;
+	=&nbsp;框输出:<input id="result" type="text"/>元素内容输出:<span id="span"></span>
+</body>
+</html>
