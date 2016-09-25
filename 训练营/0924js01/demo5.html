@@ -11,7 +11,7 @@
 			res.innerHTML = "请输入0-100数字";
 		}else if(m<0){
 			res.innerHTML = "不能小于0";
-		}else if(m==0){//0的阶乘是1
+		}else if(m==0){//0的阶乘是1 //这里要注意要用双等于，单等于是赋值，双等于才是判断
 			res.innerHTML = 1; 
 		}else{//从1累乘到n
 			var s = 1;
