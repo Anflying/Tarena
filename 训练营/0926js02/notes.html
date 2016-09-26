@@ -1,0 +1,176 @@
+9月26日 天气 晴朗
+回顾:
+js概述
+	概述
+	脚本语言,解释型语言,不需要编译,任何文本编辑工具都可以编写
+	由浏览器内置引擎执行
+	基于对象:内置大量现成对象
+	如何使用
+事件定义式
+	在事件定义时直接写js
+嵌入式
+	使用<script>js代码</script>标签
+文件调用式
+	代码位于单独的js文件中
+	html页面引用js文件
+
+调试
+	解释性代码,代码错误,则页面中无效果
+	使用错误控制台查看console.log()
+	可以在控制台直接敲代码.测试和调试
+
+语法规范
+
+标识符,关键字,保留字
+
+数据类型
+	特殊类型 -null/undefined
+	内置对象 -Number/String/Boolean/Function/Array
+	外部对象 -window/
+	自定义对象
+
+数据类型的转换 
+	toString
+		转换为字符串
+	parseInt
+		转换为整数  不能转返回NaN
+	typeof
+		返回数据类型
+	isNaN
+		判断被检测表达式经过转换后是否不是一个数
+		不是数则返回true 否则false
+
+7.运算符
+和数学的运算符一致
+		全等===
+			类型相同
+			数据相同
+		==
+			数据相同
+		=
+			赋值
+条件运算
+循环语句
+
+对象
+	使用 对象.属性/对象.方法
+常用的对象
+	String对象
+		大小写转换/获取指定字符/查询指定字符/截取字符串/替换字符串/拆分
+	
+	
+	
+	
+今日内容:
+	
+	Number
+		toFixed(num)转换为字符串并且保留一定的小数点.num为小数点的位数
+	Boolean
+		
+	Array
+		var num = new Array();
+		var num = new Array(7);
+		var num = new Array("1","2","3");
+		var num =[1,2,3]
+		var a1 = [3,"zhangsan",true];//因为a1没有类型 所以数组中可以放不同类型的数据 js中的数组都是object数组
+		数组的倒转与排序
+			x.reverse()//改变原来的数组
+		数组的排序
+			x.sort()//默认按照字符串比较,也改变原来的数组
+			x.sort(function(a,b){return a-b;});传入一个函数,使数字数组能按大小排序
+	Math
+		Math.PI
+		Math.E
+		Math.round
+		...
+	Date
+		var now = new Date()创建一个以客户机的时间对象
+		或者在()内加入一个指定的时间
+		
+		Date对象的常用方法
+			读写时间毫秒
+				gitTime()/setTime()
+			读写时间分量
+				Date.gitFullYear()//获取年
+				Date.gitMonth()//获取月份,注意月份从零开始
+				Date.gitDate()//获取日
+			转换为字符串	
+	RegExp
+		正则表达式
+			创建RegExp
+				var rgExp=/pattern/flags;
+				var rgExp=new RegExp("pattern",["flags"]);
+			flags标识有以下几个
+				g:设定当前匹配为全局模式
+				i:忽略匹配中的大小写检测
+		RegExp 对象的常用方法
+			如果字符串中含有与reg里面匹配的字符串返回true,否则false
+			reg.exec(str)
+			reg.test(str)
+		String对象与正则表达式
+			方法
+				replace
+					Str.replace(reg,目标)//将str中和reg匹配的部分替换成目标
+					
+				math
+				search
+	Function
+			默认返回undefined
+			可以使用return设置返回值
+		函数的参数
+			js的函数没有重载
+			
+
+课间按列:表单的验证
+	1 html form
+	2 设置样式
+	3 
+		
+
+
+总结
+
+1 js基本语法
+	1 js变量没有类型 都是var
+	2 数据有类型:特殊,内置,外部,自定义
+	3 toString()/parseInt()/parseFloat()/isNan()/typeOf()
+	4 js中的条件可以是任意数据,一切为空的值都是false
+
+2 内置对象
+	String
+		基本和java一样
+	Number
+		toFixed(n)
+	Array****
+		创建方式:[],new Array()
+		反转:reverse()
+		排序:sort([function])function排序函数
+	Math
+		和java中的Math类似
+	Date
+		new Date() / new Date("设定的时间")
+		toLocaleDateString() / toLocaleTimeString()
+		读写时间分量:getxxx 或 setxxx
+	RegExp****
+		创建的方式-/reg/g;
+		正则的方法:reg.test(str)*****
+		字符串方法:str.replace(reg,"")*****
+	Function****
+		arguments的作用及原理*****
+		匿名函数 全局函数(eval()*****)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

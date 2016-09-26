@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>表单的验证</title>
+<style>
+	.error{
+		color:red;
+		border:1px solid red;		
+	}
+	.ok{
+		color:green;
+		border:1px solid green;
+	}
+	form{
+		height:120px;
+		width:400px;
+		border:1px solid #ccc;
+		position:absolute;
+		padding:20px;
+		top:300px;
+		left:700px;
+		background-color:#ccc;	
+	}
+	.tijiao{
+		margin-left:40px;
+		font-size:20px;
+		padding:5px;
+	}
+	.zhuce{
+		margin-left:10px;
+		font-size:20px;
+		padding:5px;
+	}
+</style>
+<script>
+	//验证帐号格式
+	function checkCode(){
+		console.log(1);
+		//获取帐号
+		var code = document.getElementById("code").value;
+		//判断帐号格式
+		var span = document.getElementById("codeMsg");
+		var reg = /^\w{5,10}$/;//正则
+		if(reg.test(code)){
+			//验证通过,设置样式为ok
+			span.className = "ok";
+			return true;
+		}else{
+			//验证失败,设置样式为error
+			span.className = "error";
+			return false;
+		}
+	}
+	function checkPwd(){
+		console.log(1);
+		//获取帐号
+		var pwd = document.getElementById("pwd").value;
+		//判断帐号格式
+		var span = document.getElementById("pwdMsg");
+		var reg = /^\w{8,20}$/;//正则
+		if(reg.test(pwd)){
+			//验证通过,设置样式为ok
+			span.className = "ok";
+			return true;
+		}else{
+			//验证失败,设置样式为error
+			span.className = "error";
+			return false;
+		}
+	}
+</script>
+</head>
+<body>
+	<form action="http://www.tmooc.cn" onsubmit="return checkCode() && checkPwd();">
+	<!-- return checkCode() + checkPwd()==2 也能达到同样效果-->
+		<p>
+			帐号:
+			<input type="text" onblur="checkCode();" id="code"/>
+			<span id="codeMsg">5-10位字母,数字,下划线</span>	
+		</p>
+		<p>
+			密码:
+			<input type="password" onblur="checkPwd();" id="pwd"/>
+			<span id="pwdMsg">8-20位字母,数字,下划线</span>	
+		</p>
+		<p>
+			<input type="submit" value="登录" onblur="" class="tijiao"/>
+			<input type="button" value="注册" class="zhuce"/>
+		</p>
+	</form>
+</body>
+</html>

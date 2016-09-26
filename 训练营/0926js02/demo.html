@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>内置对象</title>
+<script>
+	//1.String
+	var s = "javascript是很像java的";
+	console.log(s.charAt(4));//第4个字符
+	console.log(s.charCodeAt(4));
+	console.log(s.indexOf("java"));//从前面往后面找
+	console.log(s.lastIndexOf("java"));//从后面往前面找
+	//截取字符串
+	console.log(s.substring(4,10));
+	//String的API无法改变原始的String.而是生成一个新的String并返回,对原始的String没有影响
+	console.log(s);
+	console.log(s.replace("java","ECMA"));//替换第一个java的字符串
+	console.log(s.split(""));
+	
+	//2.Number
+	var n = 3.1415926;
+	console.log(n.toFixed(3));//保留三个小数
+	//3.Array
+	//若已知数据
+	var a1 = [3,"zhangsan",true];//因为a1没有类型 所以数组中可以放不同类型的数据 js中的数组都是object数组
+	console.log(a1[1]);
+	//若未知数据
+	var a2 = new Array();
+	a2.push(4);
+	a2.push("lisi");
+	a2.push(false);
+	console.log(a2[1]);
+	//注意.无论我们采用何种方式创建的数组,本质上都一样,都是object数组
+	//二维数组,每个元素都是数组的数组
+	var a3 = [
+		["济南","青岛"],       
+	    ["石家庄","保定"]
+	]
+	console.log(a3[0][1]);
+	//数组的倒转
+	var arr = [5,8,12,6,1,7];
+	arr.reverse();//改变原来的数组
+	console.log(arr);
+	//数组的排序 默认按照字符串比较
+	arr.sort();
+	console.log(arr);
+	//要替换比较函数.从而影响排序结果
+	arr.sort(function(a,b){return a-b;});
+	console.log(arr);
+	//4.Math
+	console.log(Math.PI);
+	console.log(Math.round(Math.PI));
+	//5.Date
+	//创建日期
+	var d1 = new Date();
+	console.log(d1);
+	var d2 = new Date("2016/06/03 12:12:12");
+	console.log(d2);
+	//转换为本地日期字符串
+	console.log(d1.toLocaleDateString());
+	console.log(d1.toLocaleTimeString());
+	//读写时间分量
+	console.log(d1.getFullYear());
+	console.log(d1.getMonth());//月份从零开始
+	console.log(d1.getDate());
+	
+</script>
+</head>
+<body>
+	
+</body>
+</html>
