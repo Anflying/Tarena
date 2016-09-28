@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>图片轮播</title>
+	<style>
+		.show{
+			display: inline-block;
+		}
+		.hide{
+			display: none;
+		}
+	</style>
+
+</head>
+<body>
+	<div>
+		<img class="show" src="../images/01.jpg">
+		<img class="hide" src="../images/02.jpg">
+		<img class="hide" src="../images/03.jpg">
+		<img class="hide" src="../images/04.jpg">
+		<img class="hide" src="../images/05.jpg">
+		<img class="hide" src="../images/06.jpg">
+	</div>
+</body>
+<script>
+		window.onload = function lunbo(){
+			var i = 0;
+			setInterval(function(){
+				var img = document.getElementsByTagName('img');
+				i++;
+				var num = i%img.length;
+				img[num].className = "show";
+				
+				for(var j=0;j<img.length;j++){
+					if(j == num){
+						continue;
+					}else{
+						img[j].className = "hide";
+					}
+				}
+			},2000)
+		}
+	</script>
+</html>
