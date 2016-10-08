@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+	<head>
+		<title>标题</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<!-- 
+			创建一个表单
+			1、提交方式为 get
+			2、提交地址为 http://www.baidu.com
+		-->
+		<form method="post" enctype="multipart/form-data" action="http://www.baidu.com">
+			<!-- 表单控件 -->
+			<!-- 文本框 -->
+			<p>
+				用户名称：
+				<input name="txtUsername" type="text" maxlength="10" value="请输入您的名称" >
+			</p>
+			<p>
+				用户昵称：
+				<input name="txtNickname" type="text" disabled>
+			</p>
+			<p>
+				用户密码：
+				<input name="txtUserpwd" type="password">
+			</p>
+			<p>
+				用户性别：
+				<input name="rdoGender" type="radio" value="nan" checked id="rdoMale">
+				<label for="rdoMale">男</label>
+				<input name="rdoGender" type="radio" value="nv" id="rdoFemale">
+				<label for="rdoFemale">女</label>
+			</p>
+			<p>
+				<fieldset>
+					<legend>用户爱好</legend>
+					<input name="chkHobby" type="checkbox" value="eat">吃
+					<input name="chkHobby" type="checkbox" value="drink">喝
+					<input name="chkHobby" type="checkbox" value="play">玩
+					<input name="chkHobby" type="checkbox" value="happy">乐
+				</fieldset>
+			</p>
+			<p>
+				就业城市：
+				<select name="selCity" size="3" multiple>
+					<option value="BJ">北京</option>
+					<option value="SH">上海</option>
+					<option value="TJ">天津</option>
+					<option value="CQ">重庆</option>
+				</select>
+			</p>
+			<p>
+				<input type="hidden" name="txtUserID" value="110011000110">
+			</p>
+			<p>
+				自我介绍:
+				<textarea name="txtIntro" cols="50" rows="5">这家伙很懒，什么都没有留下... ...</textarea>
+			</p>
+			<p>
+				选择头像：
+				<input type="file" name="txtUserImg">
+			</p>
+			
+			<p>
+				<input type="submit" value="起飞">
+				<input type="reset" value="归零">
+				<input type="button" value="普通按钮">
+			</p>
+		</form>
+	</body>
+</html>

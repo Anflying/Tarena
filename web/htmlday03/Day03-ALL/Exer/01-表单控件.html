@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+	<head>
+		<title>标题</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>修改个人信息</h1>
+		<form>
+			<table border="1px" cellspacing="0" cellpadding="5px">
+				<tr>
+					<td width="120">姓名:</td>
+					<td width="300">
+						<input name="txtName" value="mary">
+					</td>
+				</tr>
+				<tr>
+					<td>性别：</td>
+					<td>
+						<input type="radio" value="nv" checked name="rdoGender" id="rdoFemale">
+						<label for="rdoFemale">女士</label>
+						<input type="radio" value="nan" name="rdoGender" id="rdoMale">
+						<label for="rdoMale">男士</label>
+					</td>
+				</tr>
+				<tr>
+					<td>学历：</td>
+					<td>
+						<select name="selEdu">
+							<option value="0">其他</option>
+							<option value="1">专科</option>
+							<option value="2">本科</option>
+							<option value="3">硕士及以上</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>意向工作城市：</td>
+					<td>
+						<select name="selCity" size="5" multiple>
+							<option value="0">北京</option>
+							<option value="1">上海</option>
+							<option value="2">南京</option>
+							<option value="3">深圳</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top">个人描述：</td>
+					<td>
+						<textarea name="txtDesc" cols="30" rows="5"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<input type="checkbox" name="chkPublic" ID="chkPublic">
+						<label for="chkPublic">不要公开我的个人信息</label>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<!-- <input type="submit" value="保存"> -->
+						<button>保存</button>
+						<input type="reset" value="充填">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

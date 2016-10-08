@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>修改个人信息</title>
+	</head>
+	<body>
+		<form action="http://www.baidu.com" method="get">
+			<h2>修改个人信息</h2>
+			<table border="1" cellspacing="0" cellpadding="3" width="600" height="400">
+				<tr>
+					<td>姓名：</td>
+					<td>
+						<input type="text" value="mary" name="txtUsername">
+					</td>
+					<td rowspan="7" valign="top" width="200">
+						<details>
+							<summary>各项<mark color="yellow">技能</mark>指数</summary>
+							<ul style="list-style:none;">
+								<li>
+									HTML<meter min="0" max="100" value="100">对不起，你的浏览器不支持meter标签</meter><br>	
+								</li>
+								<li>
+									CSS3<meter min="0" max="100" value="90">对不起，你的浏览器不支持meter标签</meter><br>
+								</li>
+								<li>
+									AJAX<meter min="0" max="100" value="50">对不起，你的浏览器不支持meter标签</meter>
+								</li>
+								</ul>
+						</details>
+					</td>
+				</tr>
+				<tr>
+					<td>性别：</td>
+					<td>
+						<input type="radio" value="woman" name="rdo" id="nv" checked><label for="nv">女士</label>
+						<input type="radio" value="man" name="rdo" id="nan"><label for="nan">男士</label>
+					</td>
+				</tr>
+				<tr>
+					<td>学历：</td>
+					<td>
+						<select name="selEdu">
+							<option value="other" checked>其他</option>
+							<option value="dazhuan">大专</option>
+							<option value="benke">本科</option>
+							<option value="suoshi">硕士及以上</option>
+						</select>
+					</td>
+				</tr>
+				<tr height="80">
+					<td>意向工作城市：</td>
+					<td>
+						<select name="selCity" size="5" multiple>
+							<option value="BJ">北京</option>
+							<option value="SH">上海</option>
+							<option value="NJ">南京</option>
+							<option value="SZ">深圳</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top">个人描述：</td>
+					<td>
+						<textarea name="txtdescription" cols="30" rows="5"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>
+						<input type="checkbox" name="chkPublic" id="public"><label for="public">不要公开我的个人信息</label>
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>
+						<input type="submit" value="保存">
+						<input type="reset" value="重填">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
