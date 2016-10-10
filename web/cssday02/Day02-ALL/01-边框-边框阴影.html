@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<title>标题</title>
+		<meta charset="utf-8">
+		<style>
+			#d1{
+				width:200px;
+				height:200px;
+				border:1px solid #666;
+				/*阴影*/
+				/*box-shadow:10px 10px #654321;*/
+				/*水平偏移，垂直偏移，模糊距离，阴影颜色 ：模拟元素外发光效果*/
+				box-shadow:0px 0px 5px red;
+			}
+
+			input,summary{
+				outline:0;
+			}
+		</style>
+	</head>
+	<body>
+		<p>
+			用户名：
+			<input>
+		</p>
+		<details>
+			<summary>摘要与细节</summary>
+		</details>
+		<div id="d1"></div>
+	</body>
+</html>

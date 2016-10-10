@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+	<head>
+		<title>标题</title>
+		<meta charset="utf-8">
+		<style>
+			/*1、控制 id为d1元素里面所有的span元素的文本颜色为红色*/
+			#d1 span{
+				color:red;
+			}
+
+			/*2、控制 div中的span(子代)背景颜色为黄色*/
+			#d1>span{
+				background-color:yellow;
+			}
+
+			/*3、将 div中的p中的span 的背景颜色改为绿色*/
+			#d1>p>span{
+				background-color:green;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d1">
+			<!-- 即是d1的后代元素，也是d1的子代元素 -->
+			<span>div中的span</span>
+			<p>
+				<!-- 只是d1的后代元素 -->
+				<span>div中的p中的span</span>
+			</p>
+		</div>
+	</body>
+</html>

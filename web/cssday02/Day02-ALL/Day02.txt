@@ -1,0 +1,335 @@
+1、CSS样式表使用方式
+	1、内联方式
+		<ANY style="样式声明">
+	2、内部样式表
+		<head>
+			<style>
+				样式规则
+				样式规则
+				... ...
+			</style>
+		</head>
+	3、外部样式表
+		1、创建 **.css 文件
+		2、<link rel="stylesheet" href="">
+2、CSS样式基础语法
+	1、样式声明
+		属性:值;
+		color:red;
+		background-color:yellow;
+		font-size:12px;
+	2、样式规则
+		选择器{
+			样式声明;
+			样式声明;
+			... ...
+		}
+3、选择器
+	1、通用选择器
+		*{}
+	2、元素选择器
+		元素{}
+	3、类选择器
+		.className{}
+		引用类选择器
+		<ANY class="className">
+
+		特殊使用-分类选择器
+		元素选择器.类选择器{}
+		p.redColor{}
+
+		特殊使用-多类选择器
+		<ANY class="类选择器1 类选择器2">
+	4、ID选择器
+		与元素ID相匹配
+		#idValue{}
+
+	5、群组选择器
+		选择器1,选择器2,选择器3{}
+	6、后代选择器
+		后代：出现在某元素中的元素
+		选择器1 选择器2{}
+	7、子代选择器
+		子代：出现在某元素中的下一级的元素
+		选择器1>选择器2{}
+		<div id="d1">
+			<span></span>
+			<p>
+				<span></span>
+			</p>
+			<div>
+				<p>
+					<span></span>
+				</p>
+			</div>
+		</div>
+		<p>
+			<span></span>
+		</p>
+	8、伪类选择器
+		1、链接伪类
+			:link 未被访问的状态
+			:visited 访问过后的状态
+		2、动态伪类
+			:hover 鼠标悬停时
+			:active 元素被激活时
+			:focus 元素获取焦点时
+4、尺寸与边框
+	1、尺寸
+		1、宽度
+			width
+
+			min-width
+			max-width
+
+		2、高度
+			height
+
+			min-height
+			max-height
+
+		3、注意
+			页面中 哪些元素允许修改尺寸属性
+			1、所有的块级元素
+			2、具备width和height属性的非块级元素
+				<table width="" height="">
+				<img width="" height="">
+		4、溢出
+			属性：
+			overflow
+			overflow-x
+			overflow-y
+
+			取值：
+				1、visible
+					默认值，可见
+				2、hidden
+					隐藏
+				3、scroll
+					滚动条
+				4、auto
+					自动
+	2、边框
+		1、border:width style color;
+		2、border-方向:width style color
+		3、border-属性:值;
+		4、border-方向-属性:值;
+		注意:
+		1、color 可以取值为 transparent
+		2、取消边框显示
+			border:none;
+			border:0;
+************************************
+1、边框
+2、框模型
+3、背景属性
+4、渐变
+****************************
+1、边框
+	1、边框倒角
+		属性：border-radius
+			该属性为简写属性，可以设置四个角的倒角半径
+		取值：以px为单位 或 以 % 为单位
+
+		单角定义:
+			border-top-left-radius:左上角
+			border-bottom-right-radius:右下角
+			border-bottom-left-radius:左下角
+			border-top-right-radius:右上角
+	2、边框阴影
+		给元素增加阴影
+		属性：box-shadow
+		取值：多属性值列表
+			box-shadow:h-shadow v-shadow blur spread color inset;
+			h-shadow:必须 阴影的水平偏移距离，取值为正，向右偏，取值为负，向左偏
+			v-shadow:必须 阴影的垂直偏移距离，取值为正，向下偏，取值为负，向上偏
+			blur:可选，模糊距离
+			spread:可选，阴影的扩充尺寸
+			color:可选，阴影的颜色
+			inset:可选值，将默认的外阴影改为内阴影
+	3、轮廓
+		1、什么是轮廓
+			绘制于元素边框周围的一条线
+		2、属性
+			outline:width style color;
+			outline-width:宽度
+			outline-style:样式
+			outline-color:颜色
+
+			常用：
+				outline:0;
+				outline:none;
+
+	练习：
+		在作业基础上，完成以下操作
+		1、设置图像的边框倒角
+		2、鼠标悬停在图像上时，将边框由现有样式变成2px粗细，red边框颜色并且，不能有任何的位置变化
+2、框模型(重难点)
+	1、框模型
+		框：盒子(box)
+			页面元素皆为框
+		框模型：(box-model)定义了元素处理内容，内边距，外边距，边框的一种方式
+
+		元素的 width和height属性 指定了内容区域的宽度和高度
+
+		元素的边框是绘制于元素外围的一条线，会扩大元素的占地尺寸
+
+		内边距和外边距 也会增加元素的占地尺寸，但不会影响元素的内容区域
+
+		元素的实际宽度=左右外边距+左右边框+左右内边距+width
+
+		元素的实际高度=上下外边距+上下边框+上下内边距+height
+	2、外边距
+		1、什么是外边距
+			围绕在元素边框周围的空白区域
+			作用：
+				1、控制元素与元素之间的距离
+				2、移动元素位置
+		2、属性
+			margin:四个方向的外边距
+			margin-方向:单边设置
+			margin-top:上外边距
+			margin-bottom:下外边距
+			margin-left:左外边距
+			margin-right:右外边距
+
+			取值：
+				1、px 像素
+				2、%
+				3、auto(自动)
+				4、负值
+		3、取值-auto
+			左右方向设置为 auto 时，允许元素在其父元素中水平居中对齐，前提，必须设置该元素的宽度
+		4、取值-负值
+			移动元素，向着反方向移动
+			margin-left:-10px;向左移动10px
+			margin-top:-10px;向上移动10px
+		5、margin 属性的取值数量
+			margin:value;四个方向外边距
+			margin:v1 v2;上下  左右
+			margin:v1 v2 v3;上  左右  下
+			margin:v1 v2 v3 v4;上右下左
+			ex:
+				margin:0 auto;水平居中标准写法
+		6、页面中具备默认外边距的元素
+			h1,h2,h3,h4,h5,h6,p,ol,ul,pre,dl,dd
+			通过 CSS Reset 的方式 重写默认外边距
+		7、特殊效果
+			1、外边距合并
+				当两个垂直外边距相遇时，它们将形成一个外边距
+				合并后的外边距的高度等于两个发生合并外边距高度重的较大者
+			2、外边距的溢出
+				在某种特殊场合下，给子元素设置外边距时，效果却作用在父元素的外边距效果上了。
+				特殊场合：父元素不设置边框时，为父元素中的第一个子元素设置上外边距时，或为最后一个子元素设置下外边距时
+				解决方案：
+				1、为父元素添加边框
+					有瑕疵，父元素高度会发生改变
+				2、为父元素添加内边距来取代子元素外边距
+					有瑕疵，影响元素的尺寸
+			3、块级元素，行内元素，行内块元素的上下外边距
+				上下外边距对行内元素 无效
+				上下外边距对行内块元素的影响是，整行元素都会受到影响
+	3、内边距
+		1、什么是内边距
+			内容区域与边框之间的空间
+			会扩大元素边框所占用的区域
+		2、属性
+			padding:四个方向内边距
+			padding-top:
+			padding-bottom:
+			padding-right:
+			padding-left:
+			取值：
+				1、px
+				2、%
+			取值数量：
+			padding:value;四个方向内边距
+			padding:v1 v2;上下  左右
+			padding:v1 v2 v3;上  左右  下
+			padding:v1 v2 v3 v4;上右下左
+		3、特殊影响
+			为行内元素设置上下内边距时，只会影响元素自身，并不会影响到其他元素
+	4、属性-box-sizing
+		1、作用
+			指定边框，内边距，内容区域的计算模式
+			默认：width和height只负责定义内容区域的尺寸，border，padding额外添加到元素上的
+		2、属性 & 值
+			属性：box-sizing
+			取值：
+				1、content-box
+					默认值，在元素的width和height之外绘制边框和内边距
+				2、border-box
+					边框和内边距会包含在width和height之中
+3、背景属性
+	1、背景色
+		属性：background-color
+		取值：
+			任意合法颜色值
+			transparent
+		注意：
+			背景颜色会填充到元素的内容区域，内边距区域以及边框区域
+	2、背景图像
+		属性：background-image
+		取值：url(图像url)
+		ex:background-image:url(a.jpg);
+	3、背景平铺
+		属性：background-repeat
+		取值：
+			1、repeat
+				默认值，垂直和水平方向都平铺
+			2、repeat-x
+				横向平铺
+			3、repeat-y
+				纵向平铺
+			4、no-repeat
+				不平铺，仅显示一次
+	4、背景图片尺寸
+		属性:background-size
+		取值:
+			1、value1 value2
+				具体数值，value1表示背景图像的宽度，value2表示背景图像的高度
+			2、value1% value2%
+				以元素的尺寸占比决定背景图的尺寸
+			3、cover
+				覆盖
+				把背景图扩展至足够的大(等比缩放)，直到背景图像完全覆盖到元素区域位置
+			4、contain
+				包含
+				将背景图像等比缩放，直到右边或下边碰到元素边缘为止
+	5、背景图片固定
+		属性：background-attachment
+		取值：
+			1、scroll
+				滚动,默认值
+			2、fixed
+				固定，将背景图保持在可视化区域内，不随着滚动条而发生变化
+	6、背景图片位置
+		属性：background-position
+		取值：
+			1、x y
+				x ：背景图像水平偏移位置
+					取值为正，向右移动
+					取值为负，向左移动
+				y ：背景图像垂直偏移位置
+					取值为正，向下偏移
+					取值为负，向上偏移
+			2、x% y%
+			3、
+				x:left/center/right 替代
+				y:top/center/bottom 替代
+
+		CSS Sprites
+			将若干幅小图像拼合到一副大图像中，想看具体小图像的时候，配合着背景图已经背景图像位置的方式进行移动，显示
+
+			1、根据要看的图像，创建一个元素,该元素大小要与要看的图像大小一致。
+			2、通过 背景图像以及背景图像位置 移动背景图到 显示的元素中
+	7、背景属性-简写属性
+		background:color url() repeat attachment position;
+
+		注意：属性值可以省略，省略的话将采用默认值
+
+		background:red;
+
+
+
+

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+	<head>
+		<title>标题</title>
+		<meta charset="utf-8">
+		<style>
+			#img_list{
+				/*宽度，高度，边框*/
+				width:500px;
+				height:150px;
+				border:1px solid black;
+				/*溢出处理*/
+				overflow-x:auto;
+			}
+
+			#img_list>p{
+				/*宽度，高度，背景颜色*/
+				width:800px;
+				height:100px;
+			}
+			#img_list img{
+				width:102px;
+				height:102px;
+				border:1px solid #CCC;
+				/*倒角*/
+				border-radius:5px;
+			}
+			#img_list img:hover{
+				width:100px;
+				height:100px;
+				border:2px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="img_list">
+			<p>
+				<img src="Images/p_small_001.jpg">
+				<img src="Images/p_small_002.jpg">
+				<img src="Images/p_small_003.jpg">
+				<img src="Images/p_small_004.jpg">
+				<img src="Images/p_small_005.jpg">
+				<img src="Images/p_small_006.jpg">
+				<img src="Images/p_small_007.jpg">
+			</p>
+		</div>
+	</body>
+</html>

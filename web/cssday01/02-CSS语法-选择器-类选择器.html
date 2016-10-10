@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head>
+		<title>标题</title>
+		<meta charset="utf-8">
+		<style>
+			.redColor{
+				color:red;
+			}
+			.greenColor{color:green;}
+			.blueColor{color:blue;}
+
+			/*设置 class值为 redColor 的 p元素 的背景颜色为 Yellow*/
+			p.redColor{
+				background-color:yellow;
+			}
+
+			.bigSize{
+				font-size:24px;
+			}
+
+			/*声明定义 id为d1的元素的样式*/
+			#d1{
+				background-color:red;
+				color:green;
+				font-size:36pt;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- ID选择器 -->
+		<div id="d1">使用ID选择器设置样式</div>
+		<!-- 红色 -->
+		<div class="redColor bigSize">这是第一个div</div>
+		<!-- 绿色 -->
+		<div class="greenColor">这是第二个div</div>
+		<!-- 蓝色 -->
+		<div class="blueColor">这是第三个div</div>
+		<p class="redColor bigSize">这是一个p元素</p>
+	</body>
+</html>

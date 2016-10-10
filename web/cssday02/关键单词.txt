@@ -1,0 +1,9 @@
+border-radius:边框倒角
+box-shadow:边框阴影
+	box-shadow:h-shadow v-shadow blur spread color;
+h-shadow:水平方向向左偏移阴影
+v-shadow:垂直方向向下偏移阴影
+blur:模糊量
+spread:阴影大小
+color:颜色
+outline:轮廓 设置方式和border一样。

@@ -1,0 +1,67 @@
+a{
+	padding:3px 10px;
+}
+.logo{
+	width:76px;
+	height:14px;
+	background:url(images/iconlist_1.png) no-repeat -108px -239px;
+	margin-top:5px;
+}
+.d1{
+	width:90%;
+	border:1px solid #D1E3C1;
+	padding:15px;
+}
+.d2{
+	margin-top:10px;
+}
+.d3{
+	height:30px;
+	border-bottom:1px solid #D1E3C1;
+	border-top:1px solid transparent;
+	margin:0 auto;
+}
+.d4{
+	margin-top:20px;
+}
+.d5{
+	margin-top:25px;
+}
+.d6{
+	margin-bottom:20px;
+}
+.a1{
+	text-decoration:none;
+}
+.a2{
+	border:1px solid #CBCBCB;
+	border-radius:6px;
+}
+.s1,.s2{
+	margin:10px;
+	background-color:#F9EDD3;
+	padding:5px;
+}
+button{
+	outline:none;
+	padding:10px 10px;
+	border-top:1px solid #D3D6D5;
+	border-left:1px solid #D3D6D5;
+	border-right:1px solid #aaa;
+	border-bottom:1px solid #aaa;
+	border-radius:6px;
+	background-image:linear-gradient(to bottom,#fff,#ccc);
+}
+button:active{
+	border-bottom:1px solid #D3D6D5;
+	border-right:1px solid #D3D6D5;
+	border-left:1px solid #aaa;
+	border-top:1px solid #aaa;
+}
+.s4{
+	margin-left:20px;
+}
+.d6 a{
+	text-decoration:none;
+	color:black;
+}
