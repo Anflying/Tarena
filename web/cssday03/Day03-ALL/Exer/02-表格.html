@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+	<head>
+		<title>标题</title>
+		<meta charset="utf-8">
+		<style>
+			body{
+				font-size:12px;
+			}
+			#discuss{
+				width:990px;
+			}
+			#discuss>div.mt{
+				/*宽度，高度，边框，背景颜色*/
+				width:990px;
+				height:30px;
+				border:1px solid #ddd;
+				border-top:2px solid #999;
+				background:#f7f7f7;
+			}
+
+			#discuss-content{
+				/*宽度，下边框*/
+				width:990px;
+				border-bottom:1px solid #ddd;
+			}
+
+			/*表格*/
+			#discuss-datas{
+				width:990px;
+			}
+			#discuss-datas th{
+				/*文本颜色:#666*/
+				color:#666;
+				/*上下内边距*/
+				padding:5px 0;
+				/*下边框*/
+				border-bottom:1px solid #ddd;
+			}
+
+			/*.col1*/
+			#discuss-datas .col1{
+				/*宽度，文本左对齐*/
+				width:620px;
+				text-align:left;
+			}
+
+			#discuss-datas td{
+				/*文本颜色，水平对齐方式*/
+				color:#9F9A9C;
+				text-align:center;
+				/*边框*/
+				border-bottom:1px dotted #ddd;
+				/*上下内边距*/
+				padding:5px 0;
+			}
+
+			#discuss-datas a{
+				/*文本颜色，去掉下划线*/
+				color:#005aa0;
+				text-decoration:none;
+			}
+			#discuss-datas a:hover{
+				text-decoration:underline;
+			}
+
+			#discuss-datas i{
+				/*20*17*/
+				padding-left:20px;
+				padding-bottom:3px;
+				padding-top:2px;
+				background:url(../Images/iconlist_1.png) no-repeat;
+				margin-right:5px;
+
+			}
+			#discuss-datas i.shai{
+				background-position:-110px -220px;
+			}
+			#discuss-datas i.lun{
+				background-position:-152px -220px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="discuss">
+			<!-- 页签:990*30 -->
+			<div class="mt"></div>
+			<!-- 内容 -->
+			<div id="discuss-content">
+				<!-- 表格：主体内容 -->
+				<table id="discuss-datas">
+					<!-- 标题 -->
+					<thead>
+						<tr>
+							<th class="col1">主题</th>
+							<th>回复/浏览</th>
+							<th>作者</th>
+							<th>时间</th>
+						</tr>
+					</thead>
+					<!-- 主要内容 -->
+					<tbody>
+						<tr>
+							<td class="col1">
+								<i class="shai"></i>
+								<a href="#">好大一瓶</a>
+							</td>
+							<td>0/0</td>
+							<td>
+								<a href="#">2001年冬天</a>
+							</td>
+							<td>
+								2011-11-11 11:11:11
+							</td>
+						</tr>
+						<tr>
+							<td class="col1">
+								<i class="lun"></i>
+								<a href="#">洗衣液超级划算，活动给力</a>
+							</td>
+							<td>0/0</td>
+							<td>
+								<a href="#">xpx2001</a>
+							</td>
+							<td>
+								2011-11-11 11:11:11
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- 其他内容 -->
+			</div>
+		</div>
+	</body>
+</html>

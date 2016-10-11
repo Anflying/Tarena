@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+	<head>
+		<title>标题</title>
+		<meta charset="utf-8">
+		<style>
+			#comment{
+				/*边框，宽度，高度，内边距*/
+				border:1px solid #D0E4C2;
+				width:95%;
+				min-height:100px;
+				padding:10px;
+			}
+
+			#pages a{
+				/*边框，倒角*/
+				border:1px solid #ccc;
+				border-radius:5px;
+				/*内边距*/
+				padding:3px 10px;
+			}
+			#pages .current{
+				border:0;
+			}
+
+			/*****作业*****/
+			#comment div.top{
+				border-bottom:1px solid #D0E4C2;
+			}
+
+			#comment div.top>div{
+				/*宽度，高度*/
+				width:76px;
+				height:16px;
+				background-image:url(../Images/iconlist_1.png);
+				background-repeat:no-repeat;
+			}
+			.star1{
+				background-position:-169px -238px;
+			}
+			.star2{
+				background-position:-154px -238px;
+			}
+			.star3{
+				background-position:-139px -238px;
+			}
+			.star4{
+				/*四颗黄色星星位置偏移*/
+				background-position:-124px -238px;
+			}
+			.star5{
+				/*五颗黄色星星位置偏移*/
+				background-position:-108px -238px;
+			}
+
+			#comment b{
+				background:#FDEDD2;
+				padding:3px 5px;
+			}
+
+			/*练习2*/
+			#comment p{
+				color:#666;
+			}
+			#comment p span{
+				color:#9C9A9C;
+			}
+
+			#comment b{
+				/*取消加粗，文本颜色*/
+				font-weight:normal;
+				color:#333;
+			}
+
+			#pages{
+				text-align:right;
+				width:95%;
+				padding:0 10px;
+			}
+
+			#pages a{
+				/*文本颜色，去掉下划线*/
+				color:#005aa0;
+				text-decoration:none;
+			}
+			#pages a:hover{
+				color:#fff;
+				background:#005aa0;
+			}
+			#pages a.current{
+				color:#FF6600;
+				background:transparent;
+			}
+			body{
+				font-size:12px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 评论区域:div -->
+		<div id="comment">
+			<!-- 五角星 -->
+			<div class="top">
+				<div class="star1"></div>
+			</div>
+			<!-- 文本显示 -->
+			<p>
+				<span>标&nbsp;&nbsp;签：</span>
+				<b>比洗衣粉好</b>
+				<b>去污能力强</b>
+			</p>
+			<p>
+				<span>心&nbsp;&nbsp;得：</span>
+				买了好几次了，挺好用的...
+			</p>
+			<p>
+				<span>购买日期：</span>
+				2011-11-11 11:11:11
+			</p>
+		</div>
+		
+		<!-- 页码区域:p -->
+		<p id="pages">
+			<a class="current">1</a>
+			<a href="#">2</a>
+			<a href="#">3</a>
+			<a href="#">4</a>
+			<a href="#">5</a>
+			<a href="#">6</a>
+		</p>
+	</body>
+</html>

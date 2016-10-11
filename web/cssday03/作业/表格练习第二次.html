@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>列表</title>
+		<style>
+			body{
+				font-size:12px;
+			}
+			#dicuss a{
+				text-decoration: none;
+				color:#0057A5;
+			}
+			#dicuss a:hover{
+				text-decoration: underline;
+			}
+			ul{
+				list-style: none;
+				padding:0;
+				margin:0;
+			}
+			#dicuss{
+				width:990px;
+				margin:0 auto;
+			}
+			#nav{
+				width:990px;
+				height:30px;
+				border:1px solid #ccc;
+				border-radius:4px;
+				border-top: 2px solid #999;
+				background-color: #F7F7F7;
+			}
+			#main{
+				padding-bottom:3px;
+				border-bottom:1px solid #DADADA;
+			}
+			#main li{
+				margin:5px 0;
+				padding:5px 0;
+				border-bottom:1px dotted #DADADA;
+			}
+			#main li.dicussing{
+				border-bottom: 1px solid #DADADA;
+			}
+			#main span{
+				display:inline-block;
+				text-align:center;
+			}
+			#main span.sp1{
+				text-align:left;
+			}
+			.sp1{
+				width:660px;
+			}
+			.sp2,.sp3,.sp4{
+				width:100px;
+			}
+			.sp2,.sp4{
+				color:#A99F9D;
+			}
+			#main .sp{
+				color:#666;
+				font-weight: bold;
+			}
+			i{
+				padding-top:2px;
+				padding-bottom:3px;
+				padding-left:20px;
+				background-image: url(Images/iconlist_1.png);
+			}
+			#main i.shai{
+				background-position: -110px -220px;
+			}
+			#main i.lun{
+				background-position: -152px -220px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="dicuss">
+			<div id="nav"></div>
+			<div id="main">
+				<div class="zhuti">
+					<ul>
+						<li class="dicussing">
+							<span class="sp1 sp">主题</span>
+							<span class="sp2 sp">回复/浏览</span>
+							<span class="sp3 sp">作者</span>
+							<span class="sp4 sp">时间</span></li>
+						<li>
+							<span class="sp1"><i class="shai"></i><a href="#">好大一瓶，不错</a></span>
+							<span class="sp2">0/0</span>
+							<span class="sp3"><a href="#">2001年冬天</a></span>
+							<span class="sp4">2014-11-19</span>
+						</li>
+						<li>
+							<span class="sp1"><i class="lun"></i><a href="#">洗衣液超级划算，活动给力</a></span>
+							<span class="sp2">0/0</span>
+							<span class="sp3"><a href="#">xpx2001</a></span>
+							<span class="sp4">2014-11-19</span>
+						</li>
+						<li>
+							<span class="sp1"><i class="lun"></i><a href="">洗衣液超级划算，活动给力</a></span>
+							<span class="sp2">0/0</span>
+							<span class="sp3"><a href="#">xpx2001</a></span>
+							<span class="sp4">2014-11-19</span>
+						</li>
+						<li>
+							<span class="sp1"><i class="shai"></i><a href="">好大一瓶，不错</a></span>
+							<span class="sp2">0/0</span>
+							<span class="sp3"><a href="#">2001年冬天</a></span>
+							<span class="sp4">2014-11-19</span>
+						</li>
+					</ul>
+					<span>有问题要与其他用户讨论？</span><a href="#">点我进讨论群！</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
