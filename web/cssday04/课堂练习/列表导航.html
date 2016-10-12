@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>标题</title>
+		<style>
+			a{
+				text-decoration:none;
+			}
+			body ul {
+				padding:0;
+				margin:0;
+				list-style:none;
+			}
+			#main{
+				width:990px;
+				margin:0 auto;
+			}
+			#listNav{
+				width:990px;
+				height:40px;
+			}
+			.side{
+				width:210px;
+				height:40px;
+				background-color:#CC2A2B;
+				float:left;
+			}
+			.side a{
+				float:left;
+				height:40px;
+				width:150px;
+				color:white;
+				font-weight: bold;
+				text-align: center;
+				line-height: 40px;
+			}
+			.side i.down{
+				float: right;
+				height:20px;
+				width:20px;
+				margin-top:10px;
+				margin-right:10px;
+				background:url(images/iconlist_2.png) no-repeat -65px 0;
+			}
+			.nav{
+				width:780px;
+				height:40px;
+				float:right;
+				background-color:#E54346;
+			}
+			.nav li{
+				float:left;
+			}
+			.nav li a{
+				float:left;
+				width:100px;
+				height:40px;
+				text-align:center;
+				line-height:40px;
+				color:white;
+				font-weight:bold;
+			}
+			.nav li a:hover{
+				background-color:#BC2A2B;
+			}
+			#content{
+				box-sizing:border-box;
+				width:990px;
+				height:402px;
+				border:1px solid #ccc;
+			}
+			.new{
+				box-sizing:border-box;
+				height:400px;
+				width:210px;
+				float: left;
+				background-color:#FAFAFA;
+				border:1px solid #E03A3E;
+			}
+			.new ul{
+				padding-top: 10px;
+				width:200px;
+				float:left;
+			}
+			.new li{
+				padding:10px;
+				/* border-bottom:1px solid #DCDCDC; */
+				border-top: 1px solid #DCDCDC;
+			}
+			.new li a{
+				color:#333;
+			}
+			.new li a:hover{
+				color:red;
+			}
+			.all{
+				width:778px;
+				height:400px;
+				float:right;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<div id="listNav">
+				<div class="side">
+					<a href="#">全部商品分类</a>
+					<i class="down"></i>
+				</div>
+				<div class="nav">
+					<ul>
+						<li><a href="#">首页</a></li>
+						<li><a href="#">服装城</a></li>
+						<li><a href="#">食品</a></li>
+						<li><a href="#">团购</a></li>
+						<li><a href="#">夺宝岛</a></li>
+						<li><a href="#">闪购</a></li>
+						<li><a href="#">金融</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="content">
+				<div class="new">
+					<ul>
+						<li><a href="#">图书、音像、数字商品</a></li>
+						<li><a href="#">家用电器</a></li>
+					</ul>
+				</div>
+				<div class="all"></div>
+			</div>
+		</div>
+	</body>
+</html>

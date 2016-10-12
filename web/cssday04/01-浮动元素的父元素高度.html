@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<title>标题</title>
+		<meta charset="utf-8">
+		<style>
+			#parent{
+				border:1px solid #333;
+				/*方案1：设置父元素高度*/
+				/*height:200px;*/
+				/*方案2：让父元素浮动*/
+				/*float:left;*/
+				/*方案3：位父元素设置 overflow*/
+				/*overflow:hidden;*/
+			}
+			.c1,.c2,.c3{
+				width:200px;
+				height:200px;
+			}
+			.c1{
+				background:red;
+				float:right;
+			}
+			.c2{
+				background:green;
+				float:right;
+			}
+			.c3{
+				background:blue;
+				float:right;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="parent">
+			<div class="c1"></div>
+			<div class="c2"></div>
+			<div class="c3"></div>
+			<!-- 追加新子元素 -->
+			<div style="clear:both;"></div>
+		</div>
+		<div>Hello World 这是一段测试文本</div>
+	</body>
+</html>
